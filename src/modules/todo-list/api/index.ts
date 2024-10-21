@@ -1,6 +1,6 @@
 import { Todo } from "../types";
 
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:3001" : "/api";
 
 export type WithPagination<T> = {
   first: number,
